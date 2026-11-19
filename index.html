@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,8 +10,8 @@ if(t!=='light'&&t!=='dark')t=matchMedia('(prefers-color-scheme: dark)').matches?
 r.dataset.theme=t;r.style.colorScheme=t})();
 </script>
 <style>
-:root{--bg:#f5f5f5;--surface:#fff;--sunk:#ececec;--border:#d4d4d4;--text:#1b1b1b;--muted:#595959;--accent:#2563eb;--accent-text:#1d4ed8;--accent-ink:#fff;--tint:#e7efff;--focus:#1d4ed8;--shadow:0 1px 2px rgba(0,0,0,.06),0 6px 20px rgba(0,0,0,.05);color-scheme:light;--gut:16px;--hh:60px;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-:root[data-theme="dark"]{--bg:#1b1b1b;--surface:#292929;--sunk:#141414;--border:#454545;--text:#fff;--muted:#bdbdbd;--accent:#5b8cff;--accent-text:#8fb0ff;--accent-ink:#0b1020;--tint:#1c2744;--focus:#8fb0ff;--shadow:none;color-scheme:dark}
+:root{--bg:#f5f5f5;--surface:#fff;--sunk:#ececec;--border:#d4d4d4;--text:#1b1b1b;--muted:#595959;--accent:#ffa31a;--accent-text:#9a4a00;--accent-ink:#1b1b1b;--tint:#fff1dc;--focus:#b35f00;--shadow:0 1px 2px rgba(0,0,0,.06),0 6px 20px rgba(0,0,0,.05);color-scheme:light;--gut:16px;--hh:60px;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+:root[data-theme="dark"]{--bg:#1b1b1b;--surface:#292929;--sunk:#141414;--border:#454545;--text:#fff;--muted:#bdbdbd;--accent:#ffa31a;--accent-text:#ffa31a;--accent-ink:#1b1b1b;--tint:#3b2c14;--focus:#ffa31a;--shadow:none;color-scheme:dark}
 *,*::before,*::after{box-sizing:border-box}
 html{scroll-padding-top:calc(var(--hh) + env(safe-area-inset-top,0px) + 12px)}
 body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 Arial,Helvetica,sans-serif;-webkit-text-size-adjust:100%}
@@ -73,8 +72,8 @@ body.in-form .frame{height:calc(100dvh - 24px - env(safe-area-inset-top,0px) - e
 #toast.on{opacity:1}
 .g0{--g:#0f766e;--gt:#d9f3ef}.g1{--g:#b45309;--gt:#ffecd2}.g2{--g:#6d28d9;--gt:#ebe3ff}
 :root[data-theme="dark"] .g0{--g:#5eead4;--gt:#123b37}:root[data-theme="dark"] .g1{--g:#fdba74;--gt:#3b2a12}:root[data-theme="dark"] .g2{--g:#c4b5fd;--gt:#2b2250}
-.grp h2{display:flex;align-items:center;gap:10px}.grp h2::before{content:"";width:10px;height:22px;border-radius:4px;background:var(--g)}
-.ico{background:var(--gt)!important;color:var(--g)!important}.card:hover,.card:focus-visible{border-color:var(--g)}.card .meta{color:var(--g)}
+.grp h2{display:flex;align-items:center;gap:10px}.grp h2::before{content:"";width:10px;height:22px;border-radius:4px;background:var(--accent)}
+.card:hover,.card:focus-visible{border-color:var(--accent)}
 .cards>li{animation:rise .5s cubic-bezier(.2,.7,.2,1) both;animation-delay:calc(var(--i)*60ms)}
 #view-home,#view-form{animation:rise .45s cubic-bezier(.2,.7,.2,1)}
 @keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
@@ -4160,7 +4159,7 @@ addEventListener('message',async e=>{
 });
 frame.addEventListener('load',()=>frame.dataset.id&&frame.classList.add('ready'));
 /* Byte the helper */
-const GUY='<svg class="guy" viewBox="0 0 80 80" aria-hidden="true" style="width:100%;height:100%;stroke:none"><path d="M14 80c0-14 12-22 26-22s26 8 26 22z" fill="#3b82f6"/><path class="arm" d="M62 68c4-8 8-14 12-18" stroke="#3b82f6" stroke-width="7" stroke-linecap="round" fill="none"/><circle cx="74" cy="48" r="4.5" fill="#f2c9a0"/><circle cx="40" cy="38" r="17" fill="#f2c9a0"/><path d="M22 36c0-14 10-20 19-20s18 6 18 20c-4-7-10-10-18-10s-14 3-19 10z" fill="#2b2b3a"/><g fill="none" stroke="#1b1b1b" stroke-width="2"><rect x="26" y="33" width="12" height="9" rx="3"/><rect x="42" y="33" width="12" height="9" rx="3"/><path d="M38 37h4"/></g><circle class="eye" cx="32" cy="37.5" r="2" fill="#1b1b1b"/><circle class="eye" cx="48" cy="37.5" r="2" fill="#1b1b1b"/><path d="M34 46q6 5 12 0" fill="none" stroke="#1b1b1b" stroke-width="2" stroke-linecap="round"/><rect x="25" y="62" width="30" height="14" rx="2" fill="#e5e7eb"/><rect x="28" y="64.5" width="24" height="9" rx="1" fill="#1b1b1b"/><path d="M31 69h6M31 71.5h10" stroke="#4ade80" stroke-width="1.2"/></svg>';
+const GUY='<svg class="guy" viewBox="0 0 80 80" aria-hidden="true" style="width:100%;height:100%;stroke:none"><path d="M14 80c0-14 12-22 26-22s26 8 26 22z" fill="#ffa31a"/><path class="arm" d="M62 68c4-8 8-14 12-18" stroke="#ffa31a" stroke-width="7" stroke-linecap="round" fill="none"/><circle cx="74" cy="48" r="4.5" fill="#f2c9a0"/><circle cx="40" cy="38" r="17" fill="#f2c9a0"/><path d="M22 36c0-14 10-20 19-20s18 6 18 20c-4-7-10-10-18-10s-14 3-19 10z" fill="#2b2b3a"/><g fill="none" stroke="#1b1b1b" stroke-width="2"><rect x="26" y="33" width="12" height="9" rx="3"/><rect x="42" y="33" width="12" height="9" rx="3"/><path d="M38 37h4"/></g><circle class="eye" cx="32" cy="37.5" r="2" fill="#1b1b1b"/><circle class="eye" cx="48" cy="37.5" r="2" fill="#1b1b1b"/><path d="M34 46q6 5 12 0" fill="none" stroke="#1b1b1b" stroke-width="2" stroke-linecap="round"/><rect x="25" y="62" width="30" height="14" rx="2" fill="#e5e7eb"/><rect x="28" y="64.5" width="24" height="9" rx="1" fill="#1b1b1b"/><path d="M31 69h6M31 71.5h10" stroke="#4ade80" stroke-width="1.2"/></svg>';
 $('#bot-g').innerHTML=GUY;$('#bot-h').innerHTML=GUY;
 const KW=[['vehicle',/vehicle|car\b|trip|drive|van\b/],['parking',/park/],['personnel',/personnel|staff|hire|hiring|position|manpower/],['overtime',/overtime|\bot\b|extra hours/],['activity',/activity|routing|slip|design/],['doctrack',/document|tracking|docu|receive|release/],['ict',/\bict\b|equipment|laptop|borrow|gadget/],['customer',/customer|client|satisf|complain|feedback/],['expert',/expert|member|engagement|post-activity|survey/],['ojt',/ojt|intern|trainee|training|learning/]];
 const bot=$('#bot'),blog=$('#log'),bin=$('#bot-in');
